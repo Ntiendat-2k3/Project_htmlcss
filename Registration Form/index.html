@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+     <head>
+          <meta charset="UTF-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <title>Document</title>
+          <link rel="stylesheet" href="./style.css" />
+     </head>
+     <body>
+          <form>
+               <h2>New Account</h2>
+               <!-- Username -->
+               <div class="inputBox">
+                    <input type="text" name="" id="" required />
+                    <label for="">Username</label>
+               </div>
+               <!-- Email -->
+               <div class="inputBox">
+                    <input type="email" name="" id="" required />
+                    <label for="">Email</label>
+               </div>
+               <!-- Password -->
+               <div class="inputBox">
+                    <input type="password" name="" id="" required />
+                    <label for="">Create &nbsp Password</label>
+               </div>
+               <!-- Confirm password -->
+               <div class="inputBox">
+                    <input type="password" name="" id="" required />
+                    <label for="">Confirm &nbsp Password</label>
+               </div>
+               <!-- Submit -->
+               <div class="inputBox">
+                    <input type="submit" value="Create" />
+               </div>
+               <p>Already have an account ? <a href="#!">Login</a></p>
+          </form>
+          <script>
+               // Lấy từng chữ cái trong label
+               let label = document.querySelectorAll("label").forEach((label) => {
+                    label.innerHTML = label.innerText
+                         .split("")
+                         .map(
+                              (letters, i) =>
+                                   `<span style="transition-delay: ${i * 50}ms">${letters}</span>`
+                         )
+                         .join("");
+               });
+          </script>
+     </body>
+</html>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+* {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+     }
+     body {
+     font-family: 'Aial', sans-serif;
+     padding: 0 20px;
+}
+
+.heading {
+     padding: 10px;
+     font-size: 28px;
+     font-weight: 800;
+     letter-spacing: 2px;
+     color: #292929;
+     font-family: 'Montserrat', sans-serif;
+}
+
+p {
+     font-size: 16px;
+     line-height: 1.6;
+     margin-top: 8px;
+     color: #292929;
+     font-family: 'Lora', serif;
+}
+.highlight{  /* Phongf trình duyệt không hỗ trợ thì chạy */
+     color: red;
+}
+@supports (background-clip: text) or (-webkit-background-clip: text) {   /* Nếu trình duyệt hỗ trợ thì thực thi */
+     .highlight{
+          color: transparent;   /* bị màu đen mặc định che nên để transparent để nhìn xuyên đc */
+          background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+          background-clip: text;   /* chỉ đỏ màu vào text nhưng chrome chưa hỗ trợ */
+          -webkit-background-clip: text;   /* prefix chrome */
+     }
+} 

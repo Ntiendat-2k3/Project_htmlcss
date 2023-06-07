@@ -1,0 +1,30 @@
+/*/ position: sticky; => định vị theo thẻ cha gần nhất có thanh cuộn */
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: "DynaPuff", cursive;
+}
+body {
+     padding: 20px;
+}
+
+li::selection {
+     /* css vùng đc chọn(bôi đen) trong thẻ li */
+     color: aqua;
+     background-color: olivedrab;
+}
+
+h2 {
+     background-color: orange;
+     position: sticky;
+     top: 0; /* cuộn xuống khi nội dụng chạm top = 0 của body thì fixed */
+     /* định vị theo thẻ cha gần nhất có thanh cuộn ở đây là body */
+}
+/*: Giờ không muốn theo body mà theo chapter => chapter phải giới hạn height */
+.chapter {
+     background-color: #ccc;
+     height: 300px;
+     overflow-y: auto;
+     /*: chạm top = 0 của chapter là fixed */
+}
